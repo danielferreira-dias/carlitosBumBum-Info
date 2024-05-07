@@ -376,9 +376,18 @@ function createRuleSection(mainSection, subSection, subContainer) {
                             switch (word.valueType) {
                                 case "puntataMinima":
                                 case "puntataMaxima":
-                                case "maxWinValue":
                                     typeOfListText.textContent = `${word.content[currentLanguage]} `;
                                     typeOfListValue.textContent = ` ${word.value} ${currentCurrency}`;
+                                    typeOfListValue.style.marginLeft = "5px"
+                                    containerRTP.appendChild(typeOfListText);
+                                    containerRTP.appendChild(typeOfListValue);
+                                    containerRTP.style.flexDirection = "row";
+                                    containerRTP.style.marginBottom = "10px";
+                                    break
+                                case "maxWinValue":
+                                    typeOfListText.textContent = `${word.content[currentLanguage]} `;
+                                    typeOfListValue.textContent = ` ${word.value}x`;
+                                    typeOfListValue.style.marginLeft = "5px"
                                     containerRTP.appendChild(typeOfListText);
                                     containerRTP.appendChild(typeOfListValue);
                                     containerRTP.style.flexDirection = "row";
